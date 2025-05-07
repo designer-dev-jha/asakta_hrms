@@ -1,0 +1,22 @@
+input[type=text] {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .clusterizeTest {
+    padding: 10px;
+    display: none;
+    border: 1px solid black;
+    width: 300px;
+    background: #fafafa;
+  }
+  
+  .clusterizeTest.active {
+    display: block;
+    margin-top: -1px;
+  }
+  
+  .toggleClusterize {
+    border: 1px solid black;
+    background: white;
+  }

@@ -1,0 +1,526 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: var(--body-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+  .layout {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .has-sidebar .layout {
+    padding-left: 250px;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #2d3748;
+    color: #fff;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: width 0.3s;
+  }
+  
+  .sidebar img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .sidebar .sidebar-header {
+    padding: 20px;
+    background-color: #1a202c;
+  }
+  
+  .sidebar .sidebar-header h5 {
+    margin: 0;
+    color: #fff;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-item {
+    padding: 10px 20px;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+  
+  .menu-item a:hover {
+    background-color: #4a5568;
+  }
+  
+  .sub-menu-list {
+    padding-left: 20px;
+    display: none;
+  }
+  
+  .sub-menu > a:after {
+    content: ">";
+    float: right;
+    transform: rotate(90deg);
+  }
+  
+  .menu-item.sub-menu:hover .sub-menu-list {
+    display: block;
+  }
+
+.nav.link.show .dropdown-menu {
+    display: block;
+}
+  
+  .content {
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .footer {
+    padding: 20px;
+    background-color: #2d3748;
+    color: #fff;
+    text-align: center;
+  }
+
+
+
+  /* Sidebar base styling */
+
+  
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.sidebar .img {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Sidebar */
+.sidebar {
+    width: 260px; 
+    position: fixed; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    background: var(--sidebar-color);
+    border-right: 1px solid #d9d9d9;
+    z-index: 1000; 
+    transition: width 0s; 
+  }
+
+
+
+.sidebar .main{
+    font-size: 12px;
+    font-weight: 600;
+    color: #5C5E64;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 5px;
+    padding-top: 12px;
+}
+
+/* --- Start Menu --- */
+
+/* Sidebar styling */
+
+.menu-links .nav-link {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+/* Ensure the .ri-list-view icon never rotates */
+#substationDropdown .ri-list-view {
+    transform: none !important;
+}
+
+/* Only rotate the arrow icon for the dropdown */
+#substationDropdown.expanded .arrow-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+/* When collapsed, hide the arrow icon */
+.sidebar.collapsed .arrow-icon {
+    display: none;
+}
+
+.sidebar.collapsed .toggle-link .ri-arrow-drop-down-line {
+    display: none;
+  }
+
+/* Nested menus */
+
+.nested-menu {
+    padding-left: 20px;
+    margin-top: 10px;
+    display: none; /* Hidden by default */
+}
+
+.expanded .nested-menu {
+    display: block;
+    position: relative;
+}
+
+.expanded .icon {
+    transform: rotate(180deg); /* Rotate icon when expanded */
+}
+
+.nested-item {
+    padding: 8px 0;
+    color: var(--text-color);
+    background-color: none;
+    text-decoration: none;
+}
+
+.nested-item:hover {
+    color: #562803;
+    font-weight: 700;
+}
+
+.nested-item:active {
+    color: #673206;
+    font-weight: 700;
+}
+
+.a.nested-item:hover {
+    color: var(--primary-color-light);
+}
+
+
+/* --- End Menu --- */
+
+/* When the sidebar is collapsed, make the nested menu appear as an overlay */
+.sidebar.collapsed .nested-menu {
+    position: absolute;
+    left: 80px;
+    top: auto;
+    width: 200px;
+    margin: -10px;
+    background-color: #ffffff;
+    border: 1px solid #54545428;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  /* Additional styling to ensure nested items look good */
+  .menu-n{
+      display: block;
+      margin-left: 10px;
+      border-left: 2px solid #673206;
+      background-color: rgba(173, 181, 189, 0.125);
+  }
+  
+  .nested-item {
+    padding: 10px;
+    background-color: transparent;
+    /* color: #000; */
+  }
+  
+  .nested-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Adjustments when Sidebar is collapsed */
+  
+  .sidebar.collapsed {
+      width: 80px;
+  }
+  
+  .sidebar.collapsed ~ .header {
+      left: 80px; 
+      width: calc(100% - 80px); 
+    }
+    
+    .sidebar.collapsed ~ .main-content {
+      margin-left: 80px;
+    }
+  
+  .sidebar.collapsed .text.nav-text {
+      display: none;
+  }
+  
+  .sidebar.collapsed .img {
+      min-width: 40px;
+  }
+  
+  .sidebar.collapsed .toggle {
+      right: -15px;
+      top: 85%;
+      transform: rotate(180deg);
+      transition: var(--tran-02);
+  }
+  
+  .sidebar.collapsed .expanded-logo {
+      display: none;
+      transition: var(--tran-05);
+  }
+  
+  .sidebar .collapsed-logo {
+      display: none;
+      transition: var(--tran-05);
+      
+  }
+  /* #footer-img{
+      position: absolute;
+      bottom: 1rem;
+  } */
+  
+  .sidebar.collapsed .collapsed-logo {
+      display: flex;
+      transition: var(--tran-05);
+  }
+  
+  
+  
+  .sidebar li {
+      min-height:36px!important;
+      /* background: var(--sidebar-color); */
+      margin-top: 10px;
+      list-style: none;
+      align-items: center;
+  }
+  
+  .sidebar li.active{
+      background: var(--primary-color-light);
+      border-radius: 8px;
+  }
+  
+  
+  .nested-item{
+      padding: 10px;
+  }
+  
+  .sidebar li .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* min-width: 24px; */
+      font-size: 20px;
+  }
+  
+
+
+  .sidebar ul {
+    padding-left: 0;
+}
+
+.sidebar li .icon,
+.sidebar li .text {
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header {
+    position: relative;
+}
+
+
+  .sidebar-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: var(--primary-color-light);
+    border-top: 1px solid #D9D9D9;
+}
+
+.sidebar .sidebar-footer img {
+    width: 100%;
+    padding: 10px 10px;
+    
+}
+
+.sidebar-footer .expanded-logo img {
+    width: 70%;
+    /* max-width: 130px; */
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Start Customize scrollbar colors */
+.menu-bar {
+    height: calc(100vh - 60px);
+    overflow-y: auto; 
+    scrollbar-width: thin; 
+    scrollbar-color: #ccc transparent; 
+  }
+  
+  .menu-bar::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .menu-bar::-webkit-scrollbar-thumb {
+    background-color: #ccc; 
+    border-radius: 10px; 
+  }
+  
+  .menu-bar::-webkit-scrollbar-track {
+    background-color: transparent; 
+  }
+
+/* End Customize scrollbar colors */
+
+
+/* .sidebar .sidebar-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+} */
+
+
+  .sidebar .menu-bar {
+    padding: 10px 10px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 100%;
+    right: -15px;
+    transform: translateY(-50%);
+    height: 28px;
+    width: 28px;
+    font-weight: 500;
+    font-size: 22px;
+    background: var(--primary-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    color: var(--sidebar-color-icon);
+    border: 1px solid #D9D9D9;
+    transition: var(--tran-05);
+    z-index: 1200;
+}
+
+
+
+.sidebar li a {
+    min-height: 36px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar li a:hover {
+    background: var(--primary-color-light);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: #673206;
+    font-weight: 500;
+}
+
+
+
+.sidebar {
+    width: 260px; 
+    position: fixed;
+    height: 100%;
+    background: var(--sidebar-color); /* Sidebar background color */
+    border-right: 1px solid #d9d9d9;
+    z-index: 1000;
+    transition: width var(--tran-05); /* Smooth width transition */
+}
+
+/* Text within the sidebar */
+.sidebar .text {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Sidebar in collapsed state */
+.sidebar.collapsed {
+    width: 80px;
+    transition: width var(--tran-05); /* Smooth width transition */
+}
+
+/* Menu link styling within the sidebar */
+.sidebar li a {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background-color var(--tran-02), color var(--tran-02);
+}
+
+/* Hover effect for sidebar menu links */
+.sidebar li a:hover {
+    background: var(--primary-color-light);
+    color: #673206; /* Change text color on hover */
+}
+
+/* Sidebar footer image */
+.sidebar-footer img {
+    width: 100%; /* Ensures the footer image spans the entire width */
+    padding: 10px 10px;
+}
+
+/* Sidebar nested menu styling */
+.nested-menu {
+    padding-left: 20px;
+    margin-top: 10px;
+    display: none; /* Hide nested menu by default */
+}
+
+/* Expand the nested menu on hover */
+.expanded .nested-menu {
+    display: block;
+}
+
+/* When the sidebar is collapsed, make the nested menu an overlay */
+.sidebar.collapsed .nested-menu {
+    position: relative;
+    left: 80px;
+    top: auto;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styling for smooth sidebar collapse/expand */
+.sidebar.collapsed .text.nav-text {
+    display: none;
+}
+
+  

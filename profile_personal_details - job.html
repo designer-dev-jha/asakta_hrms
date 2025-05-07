@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HRMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="/assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+<body>
+
+
+  <div class="homefluid">
+    <aside class="sidebar">
+      <header class="head">
+        <div class="image-text" style="background: #FFF5EC; height: 80px;">
+          <!-- Expanded Logo (default) -->
+          <span class="img expanded-logo">
+            <img src="/assets/images/askta_logo1.svg" alt="Expanded Logo">
+          </span>
+          <!-- collapsed Logo (shown on action) -->
+          <span class="img collapsed-logo">
+            <img src="/assets/images/askta_logo_s.svg" alt="collapsed Logo">
+          </span>
+        </div>
+        <hr class="solid">
+        <i class="ri-expand-left-right-line toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+            <span class="main">MAIN</span>
+            <ul class="menu links">
+                <li class="nav link">
+                    <a href="/index.html" data-bs-toggle="tooltip" title="Dashboard">
+                        <i class="ri-home-2-line icon"></i>
+                        <span class="text nav-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav link active">
+                  <a href="" data-bs-toggle="tooltip" title="Home">
+                    <i class="ri-dashboard-line icon"></i>
+                    <span class="text nav-text" fw-semibold>My Profile</span>
+                  </a>
+               </li>
+                <li class="nav link">
+                    <a href="" data-bs-toggle="tooltip" title="Map View">
+                        <i class="ri-map-2-line icon"></i>
+                        <span class="text nav-text">Team</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </aside>
+  
+    <div class="main-content-wrapper">
+      <header class="header">
+        <div class="header-content responsive-wrapper">
+          <div class="header-navigation">
+            <div class="header-navigation-actions">
+              <div class="">
+                <span class="img expanded-logo">
+                  <h3 class="fw-semibold" style="color: #673206;">HRMS</h3>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Center Section: Search Bar -->
+          <div class="header-search" style="flex-grow: 1; display: flex; justify-content: center;">
+            <div class="input-group" style="max-width: 600px; width: 100%;">
+              <input type="text" class="form-control" placeholder="Search with Emploee name or ID..." aria-label="Search">
+              <span class="input-group-text">
+                <i class="ri-search-line"></i> <!-- Remix Icon for search -->
+              </span>
+            </div>
+          </div>
+          <div class="header-actions" style="display: flex; gap: 10px;">
+            <div class="admin dropdown" style="display: flex; align-items: center;">
+              <!-- Dropdown Toggle -->
+              <a href="#" class="d-flex align-items-center text-decoration-none text-dark user" id="adminDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="text nav-text" style="font-weight: 600; font-size: 14px; padding-left: 7px; padding-top: 1px; color: #673206;">MP</span>
+              </a>
+            
+              <!-- Dropdown Menu -->
+              <ul class="dropdown-menu" aria-labelledby="adminDropdown" style="margin-top: 20px;">
+                <li><a class="dropdown-item" href="#"><i class="ri-user-line me-2"></i> Profile</a></li>
+                <li><a class="dropdown-item" href="#"><i class="ri-settings-3-line me-2"></i> Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><i class="ri-logout-box-line me-2"></i> Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+  
+      <main class="main-content">
+        <div class="heading">
+          <div class="d-md-flex justify-content-between align-items-center mb-2">
+            <ul class="nav btn-nav">
+              <li class="nav-item">
+                <a class="nav-link nav-text active fw-semibold" aria-current="page" href="/profile_personal_details_primary_details.html">Personal Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-text" href="/profile_attandance.html">Attendance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-text" href="/profile_finance_my_pay.html">Finance</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-12 mb-2">
+            <div class="card" style="position: relative;">
+              <div class="card-body">
+                <a href="#" class="btn-view text-decoration-none" style="position: absolute; top: 10px; right: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="edit">
+                  <i class="ri-edit-2-fill"></i>
+                </a>
+                <!-- <h5 class="card-title fw-bold fw-bold mb-3">Holidays</h5> -->
+                <div class="col-md-12 d-flex">
+                    <div class="row g-0 my-4">
+                      <div class="col-md-2">
+                        <img src="/assets/images/profile.png" class="img-fluid rounded-circle bg-light">
+                      </div>
+                      <div class="col-md-10">
+                        <div class="card-body">
+                          <h1 class="card-title fw-bold fw-semibold mb-3 px-2">Employee Name </h1>
+                          <div class="row g-2 mt-2 px-2">
+                            <div class="col-md-2 d-flex">
+                              <i class="ri-hashtag icon"></i>
+                              <p class="fw-semibold mb-0">ORG001</p>
+                            </div>
+                            <div class="col-md-2 d-flex">
+                              <i class="ri-user-2-line icon"></i>
+                              <p class="card-text fw-semibold mb-0">Intern</p>
+                            </div>
+                            <div class="col-md-3 d-flex">
+                              <i class="ri-mail-line icon"></i>
+                              <p class="card-text fw-semibold mb-0">employee@org.com</p>
+                            </div>
+                            <div class="col-md-2 d-flex">
+                              <i class="ri-smartphone-line icon"></i>
+                              <p class="card-text fw-semibold mb-0">1234567890</p>
+                            </div>
+                            <div class="col-md-3 d-flex">
+                              <i class="ri-map-pin-line icon"></i>
+                              <p class="card-text fw-semibold mb-0">Hyderabad</p>
+                            </div>
+                          </div>
+                          <div class="row g-2 mt-4 px-2">
+                            <div class="col-md-4 d-flex">
+                              <h5 class="h5 card-title fw-bold mb-0">Department : IT</h5>
+                            </div>
+                            <div class="col-md-8 d-flex">
+                              <h5 class="h5 card-title fw-bold mb-0">Reporting Manager : Jawahar Kartik</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="heading">
+          <div class="d-md-flex justify-content-between align-items-center mb-2">
+            <ul class="nav btn-nav">
+              <li class="nav-item ">
+                <a class="nav-link nav-text" href="/profile_personal_details_primary_details.html">Primary Details</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link nav-text active fw-semibold" aria-current="page" href="/profile_personal_details - job.html">Job</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link nav-text" href="#">Documents</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-12 mb-2">
+            <div class="card" style="position: relative;">
+              <div class="row g-0">
+                
+                <!-- Left Side Column -->
+                <div class="col-md-6 border-end">
+                  <div class="card-body" style="position: relative;">
+                    <a href="#" class="btn-view text-decoration-none" style="position: absolute; top: 10px; right: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="edit">
+                      <i class="ri-edit-2-fill"></i>
+                    </a>
+                    <h5 class="card-title fw-bold mb-0 px-3">Job Details</h5>
+                    
+                    <!-- First Row -->
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Employee ID</small></p>
+                          <span class="card-text">ORG001</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Date Of Joining</small></p>
+                          <span class="card-text">dd/mm/yyyy</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Job Title - Primary</small></p>
+                          <span class="card-text">Intern</span>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <!-- Second Row -->
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Job Title - Secondary</small></p>
+                          <span class="card-text">Intern</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Worker type</small></p>
+                          <span class="card-text">Permanent</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Time type</small></p>
+                          <span class="card-text">Full time</span>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <!-- Third Row -->
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">In  Probation ?</small></p>
+                          <span class="card-text">NO</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Notice Period</small></p>
+                          <span class="card-text">2 Months</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Contract Status</small></p>
+                            <span class="card-text tertiary">&bull; Not Applicable</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="mb-0">
+
+                  <div class="card-body" style="position: relative;">
+                    <a href="#" class="btn-view text-decoration-none" style="position: absolute; top: 10px; right: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="edit">
+                      <i class="ri-edit-2-fill"></i>
+                    </a>
+                    <h5 class="card-title fw-bold mb-0 px-3">Employee Time</h5>
+                    
+                    <!-- First Row -->
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Shift</small></p>
+                          <span class="card-text">HQ Shift</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Weekly Off Policy</small></p>
+                          <span class="card-text">Sunday</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Attendance Capture Scheme</small></p>
+                          <span class="card-text">General Capture Scheme</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Second Row -->
+                    <div class="row g-0">
+                      <div class="col-md-6">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Attendance Penalization Policy</small></p>
+                          <span class="card-text">Aquaponics</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Leave Plan</small></p>
+                          <span class="card-text">General Leave Policy</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Right Side Column -->
+                <div class="col-md-6">
+                  <div class="card-body" style="position: relative;">
+                    <a href="#" class="btn-view text-decoration-none" style="position: absolute; top: 10px; right: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="edit">
+                      <i class="ri-edit-2-fill"></i>
+                    </a>
+                    <h5 class="card-title fw-bold mb-0 px-3">Organization</h5>
+                    
+                    <!-- Contact Details Row -->
+                    <div class="row g-0">
+                      <div class="col-md-12">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Business Unit</small></p>
+                          <span class="card-text">Organization Pvt. Ltd.</span>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Department</small></p>
+                          <span class="card-text">IT - Team</span>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="row g-0">
+                      <div class="col-md-12">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Reports To</small></p>
+                          <span class="card-text">Manager@org.com</span>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Manager Of Manager (L2 Manager)</small></p>
+                          <span class="card-text">Manager(L2)@org.com</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="mb-0">
+
+                  <div class="card-body" style="position: relative;">
+                    <a href="#" class="btn-view text-decoration-none" style="position: absolute; top: 10px; right: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="edit">
+                      <i class="ri-edit-2-fill"></i>
+                    </a>
+                    <h5 class="card-title fw-bold mb-0 px-3">Others</h5>
+                    
+                    <!-- First Row -->
+                    <div class="row g-0">
+                      <div class="col-md-6">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Travel Policy</small></p>
+                          <span class="card-text">-Not Set-</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="card-body">
+                          <p class="card-title mb-0"><small class="text-muted">Loan Policy</small></p>
+                          <span class="card-text">-Not Set-</span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+        
+    </main>
+    </div>
+  </div>
+</body>
+</html>
